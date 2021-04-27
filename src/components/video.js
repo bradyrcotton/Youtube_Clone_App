@@ -1,10 +1,12 @@
 import React from 'react';
 
-const Video = (props) => {
+const Video = () => {
     return(
-        <div className="container-videos">
-            testing
-        </div>
+        
+        <video width="750" height="500" controls>
+        <source src="https://www.youtube.com/watch?v=fOgRO5s53Dw" type="video/web"/> 
+        </video>
+        
     );
 }
 
