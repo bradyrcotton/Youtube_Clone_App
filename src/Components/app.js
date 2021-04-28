@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-
-import Video from './Video/video'
-
+import SearchBar from './searchBar';
+import Video from './Video/video';
+import RecommendedVideos from './recommendedVideos';
 
 class App extends Component {
     state = {
@@ -15,7 +15,7 @@ componentDidMount(){
 }
 
 // mapVideos(){
-//     return this.state.videos.map(viideo =>
+//     return this.state.videos.map(video =>
 //         <Video
 //             key={video.id}
 //             video={video}
@@ -26,7 +26,10 @@ render(){
 
     return(
         <div className="container=fluid">
+            <SearchBar />
             <Video />
+            <RecommendedVideos />
+
         </div>
     );
 }
