@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import SearchBar from './searchBar';
+import SearchBar from './SearchBar/searchBar';
 import Video from './Video/video';
-import RecommendedVideos from './recommendedVideos';
+import RecommendedVideos from './RecommendedVideos/recommendedVideos';
 
 class App extends Component {
     state = {
@@ -10,9 +10,11 @@ class App extends Component {
 
 
 componentDidMount(){
-    console.log("componenet did mount)");
+    console.log("component did mount)");
 
 }
+
+
 
 // mapVideos(){
 //     return this.state.videos.map(video =>
@@ -22,6 +24,7 @@ componentDidMount(){
 //             />
 //         )
 // }
+
 render(){
 
     return(
