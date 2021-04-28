@@ -16,7 +16,7 @@ componentDidMount(){
 }
 async searchQuery(search){
     console.log(search)
-    await assertExpressionStatement.get('https://www.googleapis.com/youtube/v3/search?q={'+search+'}&key={AIzaSyADHpjJZoumK0EJZLJ1eBEcitjYi8PKQTg}')
+    await assertExpressionStatement.get('https://www.googleapis.com/youtube/v3/search?q={'+search+'}&key={AIzaSyBwIiD2pkn5uOiRp8ZH3XfaLJ0qQdwyy6Q}')
 }
 
 
@@ -35,7 +35,7 @@ render(){
 
     return(
         <div className="container=fluid">
-            <SearchBar />
+            <SearchBar searchQuery={() => this.searchQuery()}/>
             <Video />
             <RecommendedVideos />
 
