@@ -21,20 +21,20 @@ async searchQuery(search){
 
 
 
-// mapVideos(){
-//     return this.state.videos.map(video =>
-//         <Video
-//             key={video.id}
-//             video={video}
-//             />
-//         )
-// }
+mapVideos(){
+    return this.state.videos.map(video =>
+        <Video
+            key={video.id}
+            video={video}
+            />
+        )
+}
 
 render(){
 
     return(
         <div className="container=fluid">
-            <SearchBar />
+            <SearchBar mapVideos={() => this.mapVideos()}/>
             <Video />
             <RecommendedVideos />
 
