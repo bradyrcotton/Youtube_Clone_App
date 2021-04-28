@@ -16,6 +16,7 @@ componentDidMount(){
 
 
 
+
 // mapVideos(){
 //     return this.state.videos.map(video =>
 //         <Video
