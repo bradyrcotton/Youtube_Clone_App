@@ -3,9 +3,11 @@ import React from 'react';
 const Video = () => {
     return(
         
-        <video width="750" height="500" controls>
-        <source src="https://www.youtube.com/watch?v=fOgRO5s53Dw" type="video/web"/> 
-        </video>
+        <iframe id="ytplayer" type="text/html" width="640" height="360"
+            src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
+            frameborder="0">
+
+        </iframe>
         
     );
 }
