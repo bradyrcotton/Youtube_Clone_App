@@ -19,33 +19,47 @@ componentDidMount(){
 
 }
 
-async searchQuery(video){
-    console.log(video)
-    let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q='${video}'&key=AIzaSyBwIiD2pkn5uOiRp8ZH3XfaLJ0qQdwyy6Q`);
+async searchQuery(searchTerm){
+    console.log(searchTerm)
+    let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q='${searchTerm}'&part=snippet&key=AIzaSyBwIiD2pkn5uOiRp8ZH3XfaLJ0qQdwyy6Q`);
     this.setState({
-        videos: response.data
+        videos: response.data.items
     })
     
 }
 
 mapVideos(){
-    return this.state.videos.map(video =>
-        <Video
-        key={videoId}
+    if(this.state.videos.length === 0){
+        let video = {
+            id: 'nmHtNEClJlE'
+        }
+        return (
+            <Video
+        key={'1234'}
         video={video}
         />
         )
+    }
+    else{
+        return this.state.videos.map(video =>
+            <Video
+            key={video.id}
+            video={video}
+            />
+            )
+    }
+    
 }
 
 
 
 render(){
-
+    console.log("state videos", this.state.videos);
     return(
         <div className="container=fluid">
             <SearchBar searchQuery={this.searchQuery.bind(this)}/>
-            <Video mapVideos={() => this.mapVideos()}/>
-            <RecommendedVideos />
+            <Video video={this.state.videos[0]}/>
+            <RecommendedVideos mapVideos={() => this.mapVideos()}/>
             <SearchResults mapVideos={() => this.mapVideos()}/>
 
         </div>
