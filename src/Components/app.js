@@ -31,7 +31,7 @@ async searchQuery(video){
 mapVideos(){
     return this.state.videos.map(video =>
         <Video
-        key={video.id}
+        key={videoId}
         video={video}
         />
         )
