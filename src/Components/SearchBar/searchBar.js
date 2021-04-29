@@ -26,7 +26,6 @@ class SearchBar extends Component  {
     }
 
     render() {
-        debugger;
         return(
             <form onSubmit={this.handleSubmit}>
                 <input type="text" value={this.state.input} onChange={this.handleChange} />

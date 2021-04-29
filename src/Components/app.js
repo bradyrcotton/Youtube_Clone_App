@@ -18,7 +18,6 @@ componentDidMount(){
 }
 
 async searchQuery(video){
-    debugger;
     console.log(video)
     return await axios.get(`https://www.googleapis.com/youtube/v3/search?q='${video}'&key=AIzaSyBwIiD2pkn5uOiRp8ZH3XfaLJ0qQdwyy6Q`)
 }
