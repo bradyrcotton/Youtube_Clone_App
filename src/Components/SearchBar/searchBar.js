@@ -16,10 +16,8 @@ class SearchBar extends Component  {
 
     handleSubmit(event) {
         event.preventDefault();
-        const video = {
-            input: this.state.input, 
-        }
-        this.props.searchQuery(video);
+        
+        this.props.searchQuery(this.state.input);
         this.setState({
             input: ''
         })
