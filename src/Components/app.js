@@ -43,6 +43,8 @@ mapVideos(){
             key={video.id.videoId}
             video={video}
             videoId={video.id.videoId}
+            videoDescription={video.snippet.description}
+            videoTitle={video.snippet.title}
             />
             
             )
@@ -56,6 +58,7 @@ render(){
     return(
         <div className="container=fluid">
             <SearchBar searchQuery={this.searchQuery.bind(this)}/>
+        
             <RecommendedVideos mapVideos={() => this.mapVideos()}/>
            
 

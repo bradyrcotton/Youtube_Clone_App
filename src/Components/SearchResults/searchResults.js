@@ -1,10 +1,10 @@
-import React from 'react';
+// import React from 'react';
 
-const SearchResults = (props) => {
-    return (
-            props.mapVideos()
+// const SearchResults = (props) => {
+//     return (
+//             props.mapVideos()
             
-    );
-}
+//     );
+// }
 
-export default SearchResults;
+// export default SearchResults;
