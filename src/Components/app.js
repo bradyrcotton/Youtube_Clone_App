@@ -43,7 +43,7 @@ mapVideos(){
     else{
         return this.state.videos.map(video =>
             <Video
-            key={video.id}
+            key={video.id.videoId}
             video={video}
             />
             )
@@ -58,7 +58,6 @@ render(){
     return(
         <div className="container=fluid">
             <SearchBar searchQuery={this.searchQuery.bind(this)}/>
-            <Video video={this.state.videos[0]}/>
             <RecommendedVideos mapVideos={() => this.mapVideos()}/>
             {/* <SearchResults mapVideos={() => this.mapVideos()}/> */}
 

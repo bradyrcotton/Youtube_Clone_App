@@ -8,8 +8,9 @@ const Video = (props) => {
     return(
         
         <iframe width="640" height="360"
-  src={`https://www.youtube.com/embed/${props.video}`}
-  frameborder="0"></iframe>
+            src={`https://www.youtube.com/embed/${props.video}`}
+            frameborder="0">
+        </iframe>
 
         // <tbody>
         //     <tr>
