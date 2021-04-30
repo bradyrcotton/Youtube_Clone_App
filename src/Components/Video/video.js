@@ -8,19 +8,15 @@ const Video = (props) => {
     console.log("videoId", props.videoId);
     let url = `https://www.youtube.com/embed/${props.videoId}`;
     console.log("url", url);
+    console.log('title', props.videoTitle);
     return(
-        
-        <iframe width="640" height="360"
-<<<<<<< HEAD
-            src={`https://www.youtube.com/embed/${props.video}`}
-            frameborder="0">
-        </iframe>
-=======
-            src={url}
-            frameBorder="0">
->>>>>>> a3cd82141644977be707777470dfa45a91da162a
-
-        </iframe>
+        <div class ="card">
+            <div class="card-body">
+        <iframe width="640" height="360" src={url} frameBorder="0"> </iframe>
+        <h2>{props.videoTitle}</h2>
+        <h6>{props.videoDescription}</h6>
+        </div>
+        </div>
     );
 }
 
