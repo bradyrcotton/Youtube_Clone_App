@@ -56,7 +56,6 @@ render(){
     return(
         <div className="container=fluid">
             <SearchBar searchQuery={this.searchQuery.bind(this)}/>
-            
             <RecommendedVideos mapVideos={() => this.mapVideos()}/>
            
 
