@@ -1,0 +1,15 @@
+div {
+    position:static;
+    display: inside;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: red;
+    background-clip: border-box;
+    float:left;
+    color: black;
+}
+
+div.card {
+    background-color: darkgrey;
+}

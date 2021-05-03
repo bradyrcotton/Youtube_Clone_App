@@ -10,13 +10,12 @@ const Video = (props) => {
     console.log("url", url);
     console.log('title', props.videoTitle);
     return(
-        <div class ="card">
-            <div class="card-body">
+        <div class ="card">    
         <iframe width="640" height="360" src={url} frameBorder="0"> </iframe>
         <h2>{props.videoTitle}</h2>
         <h6>{props.videoDescription}</h6>
         </div>
-        </div>
+        
     );
 }
 

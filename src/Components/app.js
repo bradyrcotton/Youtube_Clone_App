@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import SearchBar from './SearchBar/searchBar';
 import Video from './Video/video';
 import RecommendedVideos from './RecommendedVideos/recommendedVideos';
-import SearchResults from '../Components/SearchResults/searchResults';
+// import SearchResults from '../Components/SearchResults/searchResults';
 import axios from 'axios'
 
 
@@ -34,6 +34,8 @@ mapVideos(){
             <Video
         key={'1234'}
         videoId={'nmHtNEClJlE'}
+        videoTitle={'Shots That Will Leave Your Opponent Speechless II'}
+        videoDescription={'Learn about the "On The Rail Escape", "Off The Rail Jump" and the "Warp Shot" in this pool lesson.'}
         />
         )
     }
@@ -45,8 +47,7 @@ mapVideos(){
             videoId={video.id.videoId}
             videoDescription={video.snippet.description}
             videoTitle={video.snippet.title}
-            />
-            
+            />,
             )
     }
     
@@ -56,9 +57,8 @@ mapVideos(){
 
 render(){
     return(
-        <div className="container=fluid">
+        <div>
             <SearchBar searchQuery={this.searchQuery.bind(this)}/>
-        
             <RecommendedVideos mapVideos={() => this.mapVideos()}/>
            
 
